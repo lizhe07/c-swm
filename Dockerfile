@@ -1,5 +1,5 @@
-FROM zheli21/pytorch:1.10.1-cp39-cuda113-2004 AS base
-RUN pip install -U h5py scikit-image gym
+FROM zheli21/pytorch:1.10.1-cp37-cuda113-1804 AS base
+RUN pip install -U h5py scikit-image==0.15.0 gym==0.12.0
 
 FROM base as git-repos
 RUN mkdir /root/.ssh/
